@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Step 1: Check if ~/.bash_aliases exists. Reset if it does, create if it doesn't.
+# path to the JSON file containing aliases
+ALIASES_FILE="aliases.json"
+
+# 1. check if ~/.bash_aliases exists. reset if it does, create if it doesn't.
 if [ -f ~/.bash_aliases ]; then
     > ~/.bash_aliases
 else
     touch ~/.bash_aliases
 fi
 
-# Step 2:  Read and add aliases from the JSON file
+# 2. read and add aliases from the JSON file
 if [ -f "$ALIASES_FILE" ]; then
     while read -r alias command; do
         # Remove existing alias from ~/.bashrc
@@ -21,8 +24,6 @@ else
     exit 1
 fi
 
-# 3. Source the ~/.bash_aliases and ~/.bashrc files
+# 3. source the ~/.bash_aliases and ~/.bashrc files
 source ~/.bash_aliases
 source ~/.bashrc
-
-# End of script
