@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # path to the JSON file containing aliases
-ALIASES_FILE="aliases.json"
+ALIASES_FILE="./aliases.json"
 
 # 1. check if ~/.bash_aliases exists. reset if it does, create if it doesn't.
 if [ -f ~/.bash_aliases ]; then
