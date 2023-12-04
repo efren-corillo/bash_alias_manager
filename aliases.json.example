@@ -1,0 +1,7 @@
+{
+    "aliases": {
+        "ll": "ls -lah",
+        "gs": "git status"
+        // Add more aliases here
+    }
+}
